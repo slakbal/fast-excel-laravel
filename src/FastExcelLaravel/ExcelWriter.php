@@ -3,6 +3,7 @@
 namespace avadim\FastExcelLaravel;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class ExcelWriter  extends \avadim\FastExcelWriter\Excel
 {
@@ -127,12 +128,17 @@ class ExcelWriter  extends \avadim\FastExcelWriter\Excel
      */
     public function store($disk, $path)
     {
-        $tmpFile = $this->writer->tempFilename();
+        //TEMP FIX TO MAKE IT WORK
+        //$tmpFile = $this->writer->tempFilename();
+
+        $tmpFile = storage_path('app/tmp/'. Str::random(16) . '.xlsx');
+
         $this->save($tmpFile);
         $handle = fopen($tmpFile, 'rb');
 
         \Storage::disk($disk)->writeStream($path, $handle);
 
         fclose($handle);
+        unlink($tmpFile);
     }
 }
