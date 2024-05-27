@@ -1,5 +1,5 @@
 {
-    "name": "avadim/fast-excel-laravel",
+    "name": "slakbal/fast-excel-laravel",
     "description": "Lightweight and very fast XLSX Excel Spreadsheet Export/Import for Laravel",
     "keywords": [
         "excel",
