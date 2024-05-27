@@ -39,5 +39,7 @@
                 "Excel": "avadim\\FastExcelLaravel\\Facades\\Excel"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }
