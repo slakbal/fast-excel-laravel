@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "php": ">=7.4|^8.1",
+        "php": ">=7.4|^8.1|^8.2|^8.3",
         "ext-json": "*",
         "avadim/fast-excel-writer": "^5.3.1",
         "avadim/fast-excel-reader": "^2.15",
